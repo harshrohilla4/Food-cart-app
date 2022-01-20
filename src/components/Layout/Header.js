@@ -5,13 +5,13 @@ import React from "react";
 import mealsimg from "../../assets/meals.jpg"
 import HeaderCartButton from "./HeaderCartButton";
 
-const Header=()=>{
+const Header=(props)=>{
 
     return (
         <React.Fragment>
         <header className={classes.header}>
             <h1>Your Meals</h1>
-            <HeaderCartButton></HeaderCartButton>
+            <HeaderCartButton onClick={props.onShowCart}/>
         </header>
         <div className={classes["main-image"]}>
             <img src={mealsimg} alt="Table full of mouthwatering dishes"></img>
